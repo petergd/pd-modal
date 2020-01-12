@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 Test Page</title>
+		<meta name="description" content="HTML5 Custom Web Element Test Page">
+		<meta name="author" content="Peter Darmis">
+		<style>
+			html, body {
+			height: 100%;
+			overflow: hidden;
+			-webkit-perspective: 37.5rem;
+			-moz-perspective: 37.5rem;
+			perspective: 37.5rem;
+			}
+			:host {
+			display: block;
+			}
+			pd-modal:not(:defined) {
+			display: none;
+			}
+			pd-modal,
+			pd-modal:defined {
+			width: 100vw;
+			height: 100vh;
+			display: block;
+			position: fixed;
+			top; 0;
+			}
+		</style>
+	</head>
+	<body>
+		<template data-for="pd-modal" data-pd-modal-id="singlepage" data-modal-order="1" data-modal-id="modals1" data-modal-style="auto"><style>* { font-family: Arial; } button {background: blue; float: right; bottom: 0; margin: 1rem;} h3 {display: block; width: inherit; height: 2rem;background: blue; padding: 1rem  0;} p { font-size: 1rem; line-height: 1rem; word-spacing: .275rem; letter-spacing: .0975rem}</style><h3>Single Page Modal Header</h3><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc libero, elementum vitae nunc in, placerat fringilla massa. Nam tempus malesuada aliquam. Vivamus a imperdiet arcu, a venenatis dolor. Vivamus tempor et felis vel congue. Sed iaculis leo eu felis tempor interdum. Etiam ut justo neque. Ut sit amet magna blandit, lacinia massa quis, porttitor sem. Fusce laoreet ante eget cursus convallis. Nulla sed felis vel libero porttitor viverra quis a odio. Integer commodo interdum lorem, vitae tempor ex tristique nec. Pellentesque aliquam, felis eget efficitur efficitur, diam velit egestas lorem, non fringilla elit velit vitae elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sit amet finibus mi.</p></div><div><button class="modal-action" onclick="alert('Action button clicked!')">Action</button><button class="modal-close">Close</button></div></template>		
+		<pd-modal id="singlepage" contentbg="ff0000" overlaybg="990000" modalstyles="auto" button-text="Open Multi Page Modal"></pd-modal>
+	</body>
+</html>

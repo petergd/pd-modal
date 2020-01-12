@@ -1,0 +1,42 @@
+{
+  "name": "pd-modal",
+  "version": "1.0.0",
+  "description": "Custom Modal Window Web Component",
+  "main": "pd-modal.js",
+  "scripts": {
+    "test": "karma start --single-run --browsers Firefox karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petergd/pd-modal.git"
+  },
+  "keywords": [
+    "Web",
+    "Component",
+    "Modal",
+    "Window"
+  ],
+  "bugs": {
+    "url": "https://github.com/petergd/pd-modal/issues",
+    "email": "pdarmis@gmail.com"
+  },
+  "author": "Peter Darmis",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.0",
+    "chai": "^4.2.0",
+    "jasmine": "^3.5.0",
+    "karma": "^4.4.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-edge-launcher": "^0.4.2",
+    "karma-es6-shim": "^1.0.0",
+    "karma-firefox-launcher": "^1.2.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-spec-reporter": "0.0.32",
+    "puppeteer": "^2.0.0"
+  },
+  "homepage": "https://github.com/petergd/pd-modal#readme"
+}

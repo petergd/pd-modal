@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 Test Page</title>
+		<meta name="description" content="HTML5 Custom Web Element Test Page">
+		<meta name="author" content="Peter Darmis">
+		<style>
+			html, body {
+			height: 100%;
+			overflow: hidden;
+			-webkit-perspective: 37.5rem;
+			-moz-perspective: 37.5rem;
+			perspective: 37.5rem;
+			}
+			:host {
+			display: block;
+			}
+			pd-modal:not(:defined) {
+			display: none;
+			}
+			pd-modal,
+			pd-modal:defined {
+			width: 100vw;
+			height: 100vh;
+			display: block;
+			position: fixed;
+			top; 0;
+			}
+		</style>
+	</head>
+	<body>
+		<template data-for="pd-modal" data-pd-modal-id="singlepage" data-modal-order="1" data-modal-id="modals1" data-modal-style="auto"><style>* { font-family: Arial; } button {background: blue; float: right; bottom: 0; margin: 1rem;} h3 {display: block; width: inherit; height: 2rem;background: blue; padding: 1rem  0;} p { font-size: 1rem; line-height: 1rem; word-spacing: .275rem; letter-spacing: .0975rem}</style><h3>Single Page Modal Header</h3><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc libero, elementum vitae nunc in, placerat fringilla massa. Nam tempus malesuada aliquam. Vivamus a imperdiet arcu, a venenatis dolor. Vivamus tempor et felis vel congue. Sed iaculis leo eu felis tempor interdum. Etiam ut justo neque. Ut sit amet magna blandit, lacinia massa quis, porttitor sem. Fusce laoreet ante eget cursus convallis. Nulla sed felis vel libero porttitor viverra quis a odio. Integer commodo interdum lorem, vitae tempor ex tristique nec. Pellentesque aliquam, felis eget efficitur efficitur, diam velit egestas lorem, non fringilla elit velit vitae elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sit amet finibus mi.</p></div><div><button class="modal-action" onclick="alertme()">Action</button><button class="modal-close">Close</button></div></template>
+		<template data-for="pd-modal" data-pd-modal-id="multipage" data-modal-order="2" data-modal-id="modal2" data-modal-style="auto"><style>* { font-family: Arial; } button {background: blue; float: right; bottom: 0; margin: 1rem;} h3 {display: block; width: inherit; height: 2rem;background: blue; padding: 1rem  0;} p { font-size: 1rem; line-height: 1rem; word-spacing: .275rem; letter-spacing: .0975rem}</style><h3>Single Page Modal Header - Page 2</h3><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc libero, elementum vitae nunc in, placerat fringilla massa. Nam tempus malesuada aliquam. Vivamus a imperdiet arcu, a venenatis dolor. Vivamus tempor et felis vel congue. Sed iaculis leo eu felis tempor interdum. Etiam ut justo neque. Ut sit amet magna blandit, lacinia massa quis, porttitor sem. Fusce laoreet ante eget cursus convallis. Nulla sed felis vel libero porttitor viverra quis a odio. Integer commodo interdum lorem, vitae tempor ex tristique nec. Pellentesque aliquam, felis eget efficitur efficitur, diam velit egestas lorem, non fringilla elit velit vitae elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sit amet finibus mi.</p></div><div><button>Action</button><button class="modal-prev">Previous</button><button class="modal-close">Close</button></div></template>	
+		<template data-for="pd-modal" data-pd-modal-id="multipage" data-modal-order="1" data-modal-id="modal1" data-modal-style="auto"><style>* { font-family: Arial; } button {background: purple; float: right; bottom: 0; margin: 1rem;} h3 {display: block; width: inherit; height: 2rem;background: purple; padding: 1rem  0;} p { font-size: 1rem; line-height: 1rem; word-spacing: .275rem; letter-spacing: .0975rem}</style><h3>Single Page Modal Header - Page 1</h3><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nunc libero, elementum vitae nunc in, placerat fringilla massa. Nam tempus malesuada aliquam. Vivamus a imperdiet arcu, a venenatis dolor. Vivamus tempor et felis vel congue. Sed iaculis leo eu felis tempor interdum. Etiam ut justo neque. Ut sit amet magna blandit, lacinia massa quis, porttitor sem. Fusce laoreet ante eget cursus convallis. Nulla sed felis vel libero porttitor viverra quis a odio. Integer commodo interdum lorem, vitae tempor ex tristique nec. Pellentesque aliquam, felis eget efficitur efficitur, diam velit egestas lorem, non fringilla elit velit vitae elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras sit amet finibus mi.</p></div><div><button class="modal-action" onclick="alertme()">Action</button><button class="modal-next">Next</button></div></template>	
+		<template data-for="pd-modal" data-pd-modal-id="image-gallery" data-modal-order="1" data-modal-id=image1" data-modal-style="auto"><style>img { width: 100%; height: auto; } button { width: 2rem; border-radius: 0; border: none; background: transparent; font-size: 2rem; z-index: 999; position: fixed; padding: 1rem; background: rgba(0,0,0,0.65); color: #fff; height: auto; vertical-align: middle; } button.modal-prev { top: calc(50% - 1rem); left: 0; } button.modal-next { top: calc(50% - 1rem); left: calc(100% - 2rem); } button.modal-close { top: 0; height: auto; padding: 0 .5rem; left: calc(100% - 2rem); } .img-caption{ background: rgba(0,0,0,0.65); color: #fff; margin: 0 auto; width: 86.5vw; height: 10vh; padding: .5rem; font-size: 1rem; position: fixed; top: 85vh;}</style><img src="https://picsum.photos/1200/900"/><div class="img-caption">This is a caption text for this image</div><button class="modal-next">&#8250;</button><button class="modal-close">&#215;</button></div></template>	
+		<template data-for="pd-modal" data-pd-modal-id="image-gallery" data-modal-order="2" data-modal-id=image2" data-modal-style="auto"><style>img { width: 100%; height: auto; } button { width: 2rem; border-radius: 0; border: none; background: transparent; font-size: 2rem; z-index: 999; position: fixed; padding: 1rem; background: rgba(0,0,0,0.65); color: #fff; height: auto; vertical-align: middle; } button.modal-prev { top: calc(50% - 1rem); left: 0; } button.modal-next { top: calc(50% - 1rem); left: calc(100% - 2rem); } button.modal-close { top: 0; height: auto; padding: 0 .5rem; left: calc(100% - 2rem); } .img-caption{ background: rgba(0,0,0,0.65); color: #fff; margin: 0 auto; width: 86.5vw; height: 10vh; padding: .5rem; font-size: 1rem; position: fixed; top: 85vh;}</style><img src="https://picsum.photos/1201/900"/><div class="img-caption">This is a caption text for this image</div><button class="modal-prev">&#8249;</button><button class="modal-next">&#8250;</button><button class="modal-close">&#215;</button></div></template>
+		<template data-for="pd-modal" data-pd-modal-id="image-gallery" data-modal-order="3" data-modal-id=image3" data-modal-style="auto"><style>img { width: 100%; height: auto; } button { width: 2rem; border-radius: 0; border: none; background: transparent; font-size: 2rem; z-index: 999; position: fixed; padding: 1rem; background: rgba(0,0,0,0.65); color: #fff; height: auto; vertical-align: middle; } button.modal-prev { top: calc(50% - 1rem); left: 0; } button.modal-next { top: calc(50% - 1rem); left: calc(100% - 2rem); } button.modal-close { top: 0; height: auto; padding: 0 .5rem; left: calc(100% - 2rem); } .img-caption{ background: rgba(0,0,0,0.65); color: #fff; margin: 0 auto; width: 86.5vw; height: 10vh; padding: .5rem; font-size: 1rem; position: fixed; top: 85vh;}</style><img src="https://picsum.photos/1200/901"/><div class="img-caption">This is a caption text for this image</div><button class="modal-prev">&#8249;</button><button class="modal-close">&#215;</button></div></template>
+		<pd-modal id="multipage" contentbg="ff0000" overlaybg="990000" modalstyles="auto" button-text="Open Multi Page Modal"></pd-modal>
+		<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script type="module" src="pd-modal.js"></script>
+		<script type="text/javascript">
+			function alertme() {
+				alert("modal action");
+			}
+			customElements.whenDefined('pd-modal').then(() => {			
+				document.querySelector("pd-modal:defined").setAttribute("contentbg","323232");
+				document.querySelector("pd-modal:defined").setAttribute("overlaybg","232323");
+				document.querySelector("pd-modal:defined").setAttribute("modalstyles","auto");
+				document.querySelector("pd-modal:defined").setAttribute("button-text","Open Image Gallery Modal");
+				document.querySelector("pd-modal:defined").setAttribute("id","multipage");
+				document.querySelector("pd-modal:defined").setAttribute("id","image-gallery");
+			});
+		</script>
+	</body>
+</html>

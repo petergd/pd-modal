@@ -103,8 +103,6 @@ You can change the element's attributes by using Javascript and pass callbacks, 
 		document.querySelector("pd-modal:defined").setAttribute("id","image-gallery");
 	});
 
-In addition `CSS` from index.html page of this project will be needed to be added as it is. If not provided then unicode emojis will be used instead of custom font icons. 
-
 ## Contributing
 
 1. Fork it!

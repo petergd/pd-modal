@@ -1,4 +1,4 @@
-# pd-bubble
+# pd-modal
 
 A custom web component that can be used in web applications or websites. It provides a modal window container that can be used in various ways.
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-modal)

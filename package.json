@@ -1,6 +1,6 @@
 {
   "name": "pd-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom Modal Window Web Component",
   "main": "pd-modal.js",
   "scripts": {

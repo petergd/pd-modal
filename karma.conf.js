@@ -4,7 +4,7 @@ module.exports = function(config) {
   config.set({
     basePath: "",
     urlRoot: "/pd-modal/",
-    baseURL: "http://10.10.10.9:9876/",
+    baseURL: "http://10.11.12.29:9876/",
     frameworks: ["jasmine","chai"],
     files: [
         { pattern: "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js", included: false },

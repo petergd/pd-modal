@@ -27,7 +27,7 @@ export class pdModal extends HTMLElement {
         return (Object.keys(value).length === 0 && value.constructor === Object);
       case (typeof value == 'string'):
         return value.length == 0;
-      case (typeof value == 'number'):
+      case (typeof value == 'number' && !isNaN(value)):
         return value == 0;
       case (!value):
         return true;

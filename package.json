@@ -1,6 +1,6 @@
 {
   "name": "pd-modal",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Custom Modal Window Web Component",
   "main": "pd-modal.js",
   "scripts": {
@@ -22,11 +22,10 @@
   },
   "author": "Peter Darmis",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
     "jasmine": "^3.6.1",
-    "karma": "^4.4.1",
+    "karma": "^6.3.2",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
